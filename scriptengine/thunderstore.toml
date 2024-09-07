@@ -1,0 +1,31 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "ninesolsmodding"
+name = "BepinEx-ScriptEngine"
+# versionNumber = "11.0.0"
+versionNumber = "0.1.0"
+description = "Hot reloading for mods installed in BepinEx/scripts folder"
+websiteUrl = "https://github.com/BepInEx/BepInEx.Debug/"
+containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack = "5.4.2100"
+
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "../out"
+
+[[build.copy]]
+source = "./build/mod/BepInEx/plugins"
+target = ""
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["nine-sols"]
+
+[publish.categories]
+nine-sols = ["tools"]
