@@ -1,10 +1,22 @@
+TCLI_TOKEN := ""
+
 prepare:
-    curl --silent https://raw.githubusercontent.com/sinai-dev/UnityExplorer/master/img/icon.png --output unity-explorer/icon.png
-    curl --silent https://avatars.githubusercontent.com/u/39589027 --output scriptengine/icon.png
+    just _download_icon unity-explorer https://raw.githubusercontent.com/sinai-dev/UnityExplorer/master/img/icon.png
+    just _download_icon scriptengine https://avatars.githubusercontent.com/u/39589027
+
+    magick mogrify -resize 256x256 scriptengine/icon.png
+    magick mogrify -gravity center -background none -extent 380x380 -resize 256x256 unity-explorer/icon.png
 
 build: prepare
     just _build_mod scriptengine https://github.com/BepInEx/BepInEx.Debug/releases/download/r11/ScriptEngine_r11.zip
     just _build_mod unity-explorer https://github.com/sinai-dev/UnityExplorer/releases/download/4.9.0/UnityExplorer.BepInEx5.Mono.zip
+
+publish: #clean build
+    # tcli publish --config-path scriptengine/thunderstore.toml --file out/ninesolsmodding-BepinExScriptEngine-0.1.0.zip --token {{TCLI_TOKEN}}
+    tcli publish --config-path unity-explorer/thunderstore.toml --file out/ninesolsmodding-UnityExplorer-0.1.0.zip --token {{TCLI_TOKEN}}
+
+clean:
+    rm out -fr
 
 _build_mod path url:
     mkdir -p {{path}}/build
@@ -12,3 +24,6 @@ _build_mod path url:
     unzip -o {{path}}/build/mod.zip -d {{path}}/build/mod
 
     tcli build --config-path {{path}}/thunderstore.toml
+
+_download_icon path url:
+    curl --silent {{url}} --output {{path}}/icon.png

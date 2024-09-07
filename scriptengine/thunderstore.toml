@@ -3,7 +3,7 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "ninesolsmodding"
-name = "BepinEx-ScriptEngine"
+name = "BepinExScriptEngine"
 # versionNumber = "11.0.0"
 versionNumber = "0.1.0"
 description = "Hot reloading for mods installed in BepinEx/scripts folder"
