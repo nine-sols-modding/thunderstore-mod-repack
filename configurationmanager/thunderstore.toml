@@ -4,8 +4,8 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "ninesolsmodding"
 name = "BepinExConfigurationManager"
-versionNumber = "18.3.0"
-description = "Hot reloading for mods installed in BepinEx/scripts folder"
+versionNumber = "18.3.1"
+description = " Plugin configuration manager for BepInEx "
 websiteUrl = "https://github.com/BepInEx/BepInEx.ConfigurationManager"
 containsNsfwContent = false
 

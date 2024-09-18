@@ -17,7 +17,7 @@ build: prepare
 
 publish: #clean build
     # tcli publish --config-path scriptengine/thunderstore.toml --file out/ninesolsmodding-BepinExScriptEngine-0.1.0.zip --token {{TCLI_TOKEN}}
-    # tcli publish --config-path configurationmanager/thunderstore.toml --file out/ninesolsmodding-BepInExConfigurationManager-18.3.0.zip --token {{TCLI_TOKEN}}
+    tcli publish --config-path configurationmanager/thunderstore.toml --file out/ninesolsmodding-BepInExConfigurationManager-18.3.1.zip --token {{TCLI_TOKEN}}
     # tcli publish --config-path unity-explorer/thunderstore.toml --file out/ninesolsmodding-UnityExplorer-0.1.0.zip --token {{TCLI_TOKEN}}
 
 clean:

@@ -1,8 +1,7 @@
-# ScriptEngine from BepinEx.Debug
+# BepInEx.ConfigurationManager
 
-https://github.com/BepInEx/BepInEx.Debug
+https://github.com/BepInEx/BepInEx.ConfigurationManager
 
-> Loads and reloads BepInEx plugins from the BepInEx\scripts folder. User can reload all of these plugins by pressing the keyboard shortcut defined in the config. Shortcut is F6 by default.
-Very useful for quickly developing plugins as you don't have to keep reopening the game to see your changes.
+An easy way to let user configure how a plugin behaves without the need to make your own GUI. The user can change any of the settings you expose, even keyboard shortcuts.
 
-> Remember to clean up after the old plugin version in case you need to. Things like harmony patches or loose GameObjects/MonoBehaviours remain after the plugin gets destroyed. Loose gameobjects and monobehaviours in this case are objects that are not attached to the parent scriptengine gameobject. For example:
+The configuration manager can be accessed in-game by pressing the hotkey (by default F1). Hover over the setting names to see their descriptions, if any.
