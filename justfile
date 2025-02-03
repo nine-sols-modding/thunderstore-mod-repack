@@ -22,6 +22,7 @@ publish: #clean build
 
 clean:
     rm out -fr
+    rm */build -fr
 
 _build_mod path url:
     mkdir -p {{path}}/build
