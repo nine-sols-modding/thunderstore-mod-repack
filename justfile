@@ -15,10 +15,10 @@ build: prepare
     just _build_mod configurationmanager https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/download/v18.3/BepInEx.ConfigurationManager.BepInEx5_v18.3.zip
 
 
-publish: #clean build
+publish: clean build
     # tcli publish --config-path scriptengine/thunderstore.toml --file out/ninesolsmodding-BepinExScriptEngine-0.1.0.zip --token {{TCLI_TOKEN}}
-    tcli publish --config-path configurationmanager/thunderstore.toml --file out/ninesolsmodding-BepInExConfigurationManager-18.3.1.zip --token {{TCLI_TOKEN}}
-    # tcli publish --config-path unity-explorer/thunderstore.toml --file out/ninesolsmodding-UnityExplorer-0.1.0.zip --token {{TCLI_TOKEN}}
+    # tcli publish --config-path configurationmanager/thunderstore.toml --file out/ninesolsmodding-BepInExConfigurationManager-18.3.1.zip --token {{TCLI_TOKEN}}
+    # tcli publish --config-path unity-explorer/thunderstore.toml --file out/ninesolsmodding-UnityExplorer-0.2.0.zip --token {{TCLI_TOKEN}}
 
 clean:
     rm out -fr
