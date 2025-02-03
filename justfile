@@ -11,7 +11,7 @@ prepare:
 
 build: prepare
     just _build_mod scriptengine https://github.com/BepInEx/BepInEx.Debug/releases/download/r11/ScriptEngine_r11.zip
-    just _build_mod unity-explorer https://github.com/sinai-dev/UnityExplorer/releases/download/4.9.0/UnityExplorer.BepInEx5.Mono.zip
+    just _build_mod unity-explorer https://github.com/asd9176506911298/UnityExplorer/releases/download/1.0.0/UnityExplorer.BepInEx5.Mono.zip
     just _build_mod configurationmanager https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/download/v18.3/BepInEx.ConfigurationManager.BepInEx5_v18.3.zip
 
 
